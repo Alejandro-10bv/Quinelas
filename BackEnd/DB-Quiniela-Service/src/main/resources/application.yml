@@ -1,0 +1,21 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: quiniela-service
+
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=DB_Project;encrypt=false;trustServerCertificate=true
+    username: DevLogin
+    password: MSSql
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    database: sql_server
+
+jwt:
+  private.key: classpath:app.key
+  public.key: classpath:app.pub
